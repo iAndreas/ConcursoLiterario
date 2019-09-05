@@ -1,5 +1,5 @@
-# Litterae
-Sistema de inscrição para Concurso Literário
+<h2 align="center"> Litterae </h2>
+Sistema de inscrição para Concurso Literário.
 
 ### ✏ Requisitos ✏
 
