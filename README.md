@@ -1,7 +1,7 @@
-<h2 align="center"> Litterae </h2>
+<h1 align="center"> Litterae </h1>
 Sistema de inscrição para Concurso Literário.
 
-### ✏ Requisitos ✏
+<h2 align="center"> ✏ Requisitos ✏ </h2>
 
 - Manter usuário;
 - Manter administrador;
@@ -15,7 +15,7 @@ Sistema de inscrição para Concurso Literário.
 - Manter e-mail de dúvidas;
 - Efetuar cadastro.
 
-### 🛠 A fazer 🛠
+<h2 align="center"> 🛠 A fazer 🛠 </h2>
 
 - Efetuar cadastro (N° da inscrição, unidade, nome do aluno, pseudônimo, turma, série, endereço, cidade, e-mail, telefone.);
 - Efetuar cadastro de feedback;
