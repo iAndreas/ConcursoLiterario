@@ -1,0 +1,265 @@
+/*Equipe*/
+
+/*Equipe*/
+
+body {
+  height: 100%;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.btn-about {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1px;
+}
+
+.navbar-custom {
+  margin-bottom: 0;
+  padding: 10px;
+  background: transparent;
+  border-bottom: none;
+  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  transition: background .5s ease-in-out,padding .5s ease-in-out;
+  text-transform: uppercase;
+}
+
+.navbar-custom a {
+  color: #fff;
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1px;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.navbar-custom li a:hover {
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+  background: #fff;  
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(4) {
+  top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+  position: relative;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2),
+.navbar-toggle .icon-bar:nth-of-type(4) {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  visibility: hidden;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(4) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+}
+
+.navbar-custom li a:hover,
+.navbar-custom li a:focus {
+  background-color: transparent;
+}
+
+.top-nav-collapse {
+    padding: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    background-color: #fff;
+    border: none;
+}
+
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  margin: 0 0;
+}
+
+.jumbotron h2,
+#home h1,
+p {
+  color: #fff;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+#home {
+  background-image:url('img/livro.jpg') no-repeat bottom center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-icon {
+  display: none;
+}
+
+.btn-about {
+  padding: 15px;
+}
+
+#about {
+  height: 100%;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+
+#about p,
+#about h2,
+#portfolio p,
+#portfolio h2 {
+  color: #000;
+}
+
+#about img {
+  width: 100%;
+  height: 100%;
+}
+
+#competencies {
+  background: #606060 url('livro2.jpg') no-repeat  fixed;
+  background-size: cover;
+  overflow: auto;
+  height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+#competencies .col-sm-6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.devicons {
+  font-size: 3.6em; 
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.devicons:hover {
+  transform: rotate(360deg);
+}
+
+#portfolio {
+  background: url(/*'http://libreshot.com/wp-content/uploads/2015/05/mackbook-pro.jpg'*/) no-repeat bottom center fixed;
+  background-size: cover;
+  height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.portfolio-item  {
+  margin: 5% auto;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  position: relative;
+  max-width: 350px;
+}
+
+.portfolio-overlay {
+  height: 100%;
+  width: 100%;
+  max-width: inherit;
+  position: absolute;
+  background: #337ab7;
+  opacity: 0;
+  border: 4px solid #696969;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.portfolio-overlay i {
+  color: #fff;
+  margin: 30%;
+}
+
+.portfolio-overlay:hover {
+  opacity: 0.85;
+}
+
+#contact {
+  background: url('https://blog.biddingforgood.com/wp-content/uploads/2014/06/istock_000020047262small.jpg') no-repeat bottom center fixed;
+  background-size: cover;
+}
+
+.contact-info {
+  margin-top: %;
+}
+
+.contact-info h3 {
+  color: #393939;
+  font-weight: normal;
+  line-height: 45px;
+}
+
+.contact-info p {
+  color: #191919;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.contact-info a {
+  color: #191919;
+  font-size: 16px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 200;
+}
+
+.contact-info i {
+  color: #337ab7;
+}
+
+.social {
+  margin-top: 4%;
+}
+
+.social-icons {
+  margin-bottom: 8%;
+}
