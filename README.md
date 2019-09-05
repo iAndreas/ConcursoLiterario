@@ -1,7 +1,7 @@
 # ConcursoLiterario
 Sistema de inscrição para Concurso Literário
 
-## ✏ Requisitos ✏
+### ✏ Requisitos ✏
 
 - Manter usuário;
 - Manter administrador;
@@ -15,4 +15,10 @@ Sistema de inscrição para Concurso Literário
 - Manter e-mail de dúvidas;
 - Efetuar cadastro.
 
+### 🛠 A fazer 🛠
 
+- Efetuar cadastro (N° da inscrição, unidade, nome do aluno, pseudônimo, turma, série, endereço, cidade, e-mail, telefone.);
+- Efetuar cadastro de feedback;
+- Efetuar impressão do termo de cessão de direitos autorais e uso de imagens;
+- Inserir regulamento;
+- Autorização do ADM antes da inscrição do aluno.
