@@ -1,5 +1,5 @@
 <h1 align="center"> Litterae </h1>
-<spam align="center"> Sistema de inscrição para Concurso Literário. </spam>
+<center> Sistema de inscrição para Concurso Literário. </center>
 
 <h2 align="center"> ✏ Requisitos ✏ </h2>
 
