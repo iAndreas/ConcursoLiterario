@@ -22,4 +22,4 @@
 - Efetuar impressão do termo de cessão de direitos autorais e uso de imagens;
 - Inserir regulamento;
 - Autorização do ADM antes da inscrição do aluno;
-- Enviar e-mail de confirmação de cadastro caso o usuário tenha inserido a matrícula condizente com o SIGAA (OBS: Necessário <a href="https://getcomposer.org/download/">Composer</a>).
+- Enviar e-mail de confirmação de cadastro caso o usuário tenha inserido a matrícula condizente com o SIGAA (OBS: Necessário <a href="https://getcomposer.org/download/" target="_blank">Composer</a>).
