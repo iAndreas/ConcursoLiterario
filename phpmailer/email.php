@@ -40,7 +40,7 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
 // É preciso informar os dados de uma conta de e-mail ativa para concluir o envio;
     $mail->Username = 'andregehgoncalvesz@gmail.com';
-    $mail->Password = 'oibabaca123';
+    $mail->Password = 'senhakkk';
 
 // Para autenticar via SSL precisamos informar a porta 587, conforme recomendado pelo Gmail;
     $mail->Port = 587;
