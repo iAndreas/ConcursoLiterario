@@ -21,4 +21,5 @@
 - Efetuar cadastro de feedback;
 - Efetuar impressão do termo de cessão de direitos autorais e uso de imagens;
 - Inserir regulamento;
-- Autorização do ADM antes da inscrição do aluno.
+- Autorização do ADM antes da inscrição do aluno;
+- Enviar e-mail de confirmação de cadastro caso o usuário tenha inserido a matrícula condizente com o SIGAA.
