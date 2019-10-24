@@ -1,3 +1,5 @@
+<?php header("Content-type: text/html; charset=utf-8"); ?>
+
 <?php
 
 // O padrão para o $mail->SMTPDebug = ? é 0, depuração desativada.
@@ -14,8 +16,8 @@ require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php';
     
 // Capturamos o valor dos dados enviados no formulário e atribuímos as variáveis $assunto e $mensagem;
-    if (isset($_POST['assunto']) && !empty($_POST['assunto'])) {    
-        $assunto = $_POST['assunto'];
+    if (isset($_POST['destinatario']) && !empty($_POST['destinatario'])) {    
+        $destinatario = $_POST['destinatario'];
     }
     if (isset($_POST['mensagem']) && !empty($_POST['mensagem'])) {
               $mensagem = $_POST['mensagem'];
@@ -24,7 +26,14 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 // Instanciamos a classe PHPMailer para setar seus atributos e utilizar seus métodos;
     $mail = new PHPMailer;
 
-    $mail->SMTPDebug = 2;
+// Charset UTF-8 para acentos e cedilha;
+    $mail->CharSet = 'UTF-8';
+
+// Definimos o debug como 0 para não mostrar a comunicação entre o cliente e o servidor;
+    $mail->SMTPDebug = 0;
+
+// Definimos a língua do email enviado.
+    $mail->setLanguage('pt_br', '/vendor/phpmailer/language/');
      
 // Definimos o protocolo que será utilizado, nesse caso, o SMTP;
     $mail->isSMTP();
@@ -46,20 +55,20 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
     $mail->Port = 587;
      
 // Informamos o e-mail de destinatário e remetente, respectivamente;
-    $mail->setFrom('andregehgoncalvesz@gmail.com', 'Andre Goncalves');
-    $mail->addAddress('andreegoncalvess@gmail.com');
+    $mail->setFrom('andregehgoncalvesz@gmail.com', 'Equipe Litterae');
+    $mail->addAddress($destinatario);
      
 // Indicamos o uso do HTML no conteúdo do e-mail;
     $mail->isHTML(true);
      
 // Informamos o assunto para a mensagem;
-    $mail->Subject = $assunto;
+    $mail->Subject = "Seu cadastro no Litterae está quase completo!";
 
 // Definimos o conteúdo do e-mail e aplicamos a função nl2br() para que o conteúdo insira as quebras de linhas adicionadas ao texto;
-    $mail->Body    = nl2br($mensagem);
+    $mail->Body = "<h1>Obrigado por se cadastrar no Litterae!</h1><br>Para confirmar seu cadastro, <a href='acao.php?acao=verificar'>clique aqui</a>, caso você não tenha se cadastrado apenas ignore esta mensagem.";
 
 // Texto opcional para clientes que não suportem HTML ou desativaram o mesmo.
-    $mail->AltBody = nl2br(strip_tags($mensagem));
+    $mail->AltBody = nl2br(strip_tags("Obrigado por se cadastrar no Litterae! Para confirmar seu cadastro, clique no link acao.php?acao=verificar, caso você não tenha se cadastrado apenas ignore esta mensagem."));
      
 // Adicionamos uma condição que verifica o retorno da função send, responsável por disparar o e-mail. Informamos o erro que foi retornado pela propriedade $mail->ErrorInfo, se o envio falhar;
     if(!$mail->send()) {
