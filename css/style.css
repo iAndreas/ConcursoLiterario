@@ -1,6 +1,14 @@
+.botao{
+  display: block !important; 
+}
 /*Equipe*/
 
 /*Equipe*/
+
+.sombra{
+  color: white; 
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
 
 body {
   height: 100%;
