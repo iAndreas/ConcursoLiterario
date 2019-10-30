@@ -30,8 +30,24 @@ require_once "autoload.php";
         $stmt->bindParam(':usuario', $usuario);
         $stmt->execute();
         
-        if (count($stmt->fetchAll()) === 0) {
+        if (count($stmt->fetchAll()) == 0) {
           return true;  
+        }else{
+          return false;
+        }
+        } catch(PDOException $e) {
+          return 'Error: ' . $e->getMessage();
+      }
+  }
+  public function emailUnico(){
+      try {
+        $banco= Conexao::getInstance();
+        $pdo= $banco->getConexao();
+        $stmt = $pdo->prepare('SELECT * FROM jurado WHERE email = :email');
+        $stmt->bindParam(':email', $this->email);
+        $stmt->execute();
+        if (count($stmt->fetchAll()) === 0) {
+          return true;
         }else{
           return false;
         }
@@ -72,6 +88,30 @@ require_once "autoload.php";
           return 'Error: ' . $e->getMessage();
         }
   }
+
+  public function insertJurado(){
+      try {
+        $banco= Conexao::getInstance();
+        $pdo= $banco->getConexao();
+        $stmt = $pdo->prepare('INSERT INTO jurado (nome, usuario, senha, email, telefone) VALUES(:nome, :usuario, :senha, :email, :telefone)');
+        $nome= parent::getNome();
+        $usuario= parent::getUsuario();
+        $senha= sha1(parent::getSenha());
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':usuario', $usuario);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':telefone', $this->telefone);
+        $stmt->execute();
+        if ($stmt->rowCount() == 0) {
+          var_dump($stmt->errorInfo());
+        }else{
+          return true;
+        }
+        } catch(PDOException $e) {
+          return 'Error: ' . $e->getMessage();
+      }
+    }
     
  }
 

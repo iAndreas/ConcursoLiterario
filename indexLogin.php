@@ -20,6 +20,16 @@
                 type: 'success'
               }) </script>";
           break;
+      case 'SucessoCadA':
+          echo "<script> Swal.fire({
+                title: 'Cadastro realizado com sucesso!',
+                text: '',
+                width: 450,
+                type: 'success',
+                showConfirmButton: false,
+                timer: 1500
+              }) </script>";
+          break;
       }
     }
 

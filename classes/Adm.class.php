@@ -12,7 +12,7 @@ require_once "autoload.php";
         $stmt->bindParam(':usuario', $usuario);
         $stmt->execute();
         
-        if (count($stmt->fetchAll()) === 0) {
+        if (count($stmt->fetchAll()) == 0) {
           return true;  
         }else{
           return false;
