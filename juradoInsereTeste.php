@@ -18,20 +18,14 @@
 <body>
 
     <br>
-    <form method="get" action="acaoConcurso.php" id="form">
+    <form method="post" action="acaoConcurso.class.php" id="form">
 
 
         <input placeholder="regulamento" name="n2" id="n2" type="text" class="regulamento" required="true">
         <label>regulamento</label><br />
 
-        <input placeholder="datai" name="n3" id="n3" type="date" class="validate" required="true">
-        <label for="data">datai</label><br />
-
-
-        <input placeholder="dataf" name="n3" id="n3" type="date" class="dataf" required="true">
-        <label>dataf</label><br />
-
-        <br /><br />
+        <input placeholder="datai" name="n3" id="n3" type="data" class="validate" required="true">
+        <label for="data">datai</label><br /><br /><br />
 
         <button type="submit" name="acao" value="salvar">Enviar
             <i class="material-icons right">send</i>

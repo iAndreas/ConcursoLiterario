@@ -13,11 +13,11 @@
 		}else{
 			$aluno->setMatricula($exM);
 			setcookie("matricula", $exM);
-
+			$email = $aluno->PegaEmail();
 			$preC = $aluno->preCadastro();
 
 			if ($preC == true){
-				header("Location: indexLogin.php?sucesso=preC");
+				header("Location: phpmailer/email.php?email=$email&matricula=$exM");
 			}else{
 				header("Location: indexLogin.php?erro=preCadR");
 			}

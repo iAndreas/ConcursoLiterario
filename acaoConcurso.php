@@ -1,11 +1,11 @@
 <?php
 require_once "autoload.php";
 
-if (isset($_GET["acao"])) {
-    $concurso = new Concurso;
-    $concurso->setRegulamento($_GET["regulamento"]);
-    $concurso->setDatai($_GET["datai"]);
-    $concurso->setDataf($_GET["dataf"]);
+if (isset($_POST["acao"])) {
+    $concurso = new concurso;
+    $concurso->setRegulamento($_POST["regulamento"]);
+    $concurso->setDatai($_POST["datai"]);
+    $concurso->setDataf($_POST["dataf"]);
 
 
 
