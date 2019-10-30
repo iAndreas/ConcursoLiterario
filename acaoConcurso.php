@@ -3,7 +3,6 @@ require_once "autoload.php";
 
 if (isset($_POST["acao"])) {
     $concurso = new concurso;
-    $concurso->setIdconcurso($_POST["idconcurso"]);
     $concurso->setRegulamento($_POST["regulamento"]);
     $concurso->setDatai($_POST["datai"]);
     $concurso->setDataf($_POST["dataf"]);

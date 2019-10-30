@@ -20,8 +20,6 @@
     <br>
     <form method="post" action="acaoConcurso.class.php" id="form">
 
-        <input placeholder="idconcurso" name="n1" id="n1" type="text" class="idconcurso" required="true">
-        <label>idconcurso</label><br />
 
         <input placeholder="regulamento" name="n2" id="n2" type="text" class="regulamento" required="true">
         <label>regulamento</label><br />
