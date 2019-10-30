@@ -36,4 +36,28 @@ require_once "autoload.php";
     $this->dataf = $dataf;
   }
 
+  public function insertConcurso(){
+    try {
+      $banco= Conexao::getInstance();
+      $pdo= $banco->getConexao();
+      $stmt = $pdo->prepare('INSERT INTO concurso (idconcurso, regulamento, dataI, dataF) VALUES(:idconcurso, :regulamento, :dataI, :dataF)');
+      $idconcurso= parent::getIdconcurso();
+      $regulamento= parent::getRegulamento();
+      $datai= parent::getDatai();
+      $dataf= (parent::getDataf());
+      $stmt->bindParam(':idconcurso', $idconcurso);
+      $stmt->bindParam(':regulamento', $regulamento);
+      $stmt->bindParam(':dataI', $datai);
+      $stmt->bindParam(':dataF', $dataf);
+      $stmt->execute();
+      if ($stmt->rowCount() == 0) {
+        var_dump($stmt->errorInfo());
+      }else{
+        return true;
+      }
+      } catch(PDOException $e) {
+        return 'Error: ' . $e->getMessage();
+    }
+  }
+
 ?>
