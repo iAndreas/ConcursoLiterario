@@ -88,6 +88,17 @@ require_once "autoload.php";
       }
     }
 
+    public function PegaEmail(){
+      $banco= Conexao::getInstance();
+      $pdo= $banco->getConexao();
+      $stmt = $pdo->prepare("SELECT email from pre_cadastro where matricula = :matricula");
+      $stmt->bindParam(':matricula', $this->matricula);
+      $stmt->execute();
+      $aluno = $stmt->fetchAll();
+      return $aluno[0]['email'];
+
+    }
+
     public function userUnico(){
       try {
         $banco= Conexao::getInstance();

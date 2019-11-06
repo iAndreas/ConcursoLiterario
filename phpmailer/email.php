@@ -50,14 +50,14 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
     $mail->SMTPSecure = 'ssl';
 
 // É preciso informar os dados de uma conta de e-mail ativa para concluir o envio;
-    $mail->Username = 'andregehgoncalvesz@gmail.com';
-    $mail->Password = 'oibabaca123';
+    $mail->Username = 'equipelitterae@gmail.com';
+    $mail->Password = 'litterae123';
 
 // Para autenticar via SSL precisamos informar a porta 587, conforme recomendado pelo Gmail;
     $mail->Port = 465;
      
 // Informamos o e-mail de destinatário e remetente, respectivamente;
-    $mail->setFrom('andregehgoncalvesz@gmail.com', 'Equipe Litterae');
+    $mail->setFrom('equipelitterae@gmail.com', 'Equipe Litterae');
     $mail->addAddress($email);
      
 // Indicamos o uso do HTML no conteúdo do e-mail;
