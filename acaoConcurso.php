@@ -5,6 +5,7 @@ if (isset($_POST["acao"])) {
     $concurso = new concurso;
     $concurso->setRegulamento($_POST["regulamento"]);
     $concurso->setDatai($_POST["datai"]);
+    
     $concurso->setDataf($_POST["dataf"]);
 
 

@@ -35,11 +35,7 @@
 		$aluno->setCidade($_POST["cidade"]);
 		$aluno->setTelefone($_POST["telefone"]);
 		$aluno->setUnidadeInstituicao($_POST["unidade"]);
-		$aluno->setMatricula($_COOKIE["matricula"]);
-
-		$idPC = $aluno->FindIdPreCadastro();
-
-		$aluno->setIdPreCadastro($idPC);
+		$aluno->setIdPreCadastro($_GET["idPC"]);
 		
 		$jurado->setUsuario($_POST["usuario"]);
 		$adm->setUsuario($_POST["usuario"]);
@@ -47,8 +43,6 @@
 		$unicoU = $aluno->userUnico();
 		$unicoU2 = $jurado->userUnico();
 		$unicoU3 = $adm->userUnico();
-
-		//echo $_COOKIE["matricula"];
 
 		if ($unicoU == true and $unicoU2 == true and $unicoU3 == true and $_POST["confirmS"] == $_POST["senha"]){
 			$aluno->insertAluno();		

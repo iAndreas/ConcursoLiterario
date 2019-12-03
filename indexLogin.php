@@ -64,6 +64,13 @@
                     type: 'error'
                   }) </script>";
           break;
+          case 'erroA':
+          echo "<script> Swal.fire({
+                    title: 'Página sem permissão de acesso!',
+                    width: 450,
+                    type: 'error'
+                  }) </script>";
+          break;
       }
     }
   ?>
@@ -87,9 +94,9 @@
               <input id="matricula" type="number" name="matricula">
             </div>
             <div class="form-element form-submit">
-              <button id="signUp" class="signup" type="submit" name="precadastro">Pré-Cadastrar</button>
+              <button id="signUp" class="signup" type="submit" name="precadastro">Cadastrar</button>
           </form>
-        <form id="form-signup" onsubmit="return false;">
+        <form id="form-signup" onsubmit="return false;" style="display: inline;">
             <button id="goLeft" class="signup off">Entrar</button> 
           </div>
         </form>
@@ -111,8 +118,8 @@
             <div class="form-element form-submit">
               <button id="logIn" class="login" type="submit" name="login">Entrar</button>
           </form>
-          <form id="form-login" onsubmit="return false;">
-            <button id="goRight" class="login off" name="signup">Pré-Cadastrar</button>
+          <form id="form-login" onsubmit="return false;" style="display: inline;">
+            <button id="goRight" class="login off" name="signup">Cadastrar</button>
           </div>   
         </form>
       </div>

@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+<?php
+	if (!isset($_GET["mt"])){
+		header("Location: indexLogin.php?erro=erroA");
+	}
+
+	require_once "autoload.php";
+
+	$aluno = new Aluno;
+
+	$matriculas = $aluno->FindMatricula();
+
+	//var_dump($matriculas);
+
+	$i= 0;
+	while (count($matriculas) != $i) {
+		if (md5($matriculas[$i]["matricula"]) == $_GET["mt"]){
+			$idPC = $matriculas[$i]["idCadastro"];
+		}
+		$i++;
+	}
+?>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -43,7 +64,7 @@
 
 	    <!--   Big container   -->
 	    <div class="container">
-	    	<form action="acaoAluno.php" method="post">
+	    	<form action="acaoAluno.php?idPC=$idPC" method="post">
 	        <div class="row">
 		        <div class="col-sm-8 col-sm-offset-2">
 		            <!-- Wizard container -->

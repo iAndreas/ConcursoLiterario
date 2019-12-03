@@ -195,5 +195,18 @@ require_once "autoload.php";
           return 'Error: ' . $e->getMessage();
       }
     }
+
+    public function FindMatricula(){
+      try {
+        $banco= Conexao::getInstance();
+        $pdo= $banco->getConexao();
+        $stmt = $pdo->prepare('SELECT matricula, idCadastro FROM pre_cadastro');
+        $stmt->execute();
+        $matriculas = $stmt->fetchAll();
+        return $matriculas;
+        } catch(PDOException $e) {
+          return 'Error: ' . $e->getMessage();
+      }
+    }
 }
 ?>
