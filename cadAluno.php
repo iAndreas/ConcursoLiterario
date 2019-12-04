@@ -64,7 +64,7 @@
 
 	    <!--   Big container   -->
 	    <div class="container">
-	    	<form action="acaoAluno.php?idPC=$idPC" method="post">
+	    	<form action="acaoAluno.php?idPC=<?php echo $idPC; ?>" method="post">
 	        <div class="row">
 		        <div class="col-sm-8 col-sm-offset-2">
 		            <!-- Wizard container -->

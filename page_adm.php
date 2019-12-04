@@ -123,25 +123,34 @@
       </nav>
       <!-- End Navbar -->
       <div class="content">
-          <div class="row">
-            <div class="col-lg-12 col-md-12">
+          <div class="row" style="justify-content: center;">
+            <!-- DIVS QUADRADINHOS -->
+
+            <div class="col-lg-4 col-md-4">
               <div class="card">
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <h5>Alguma coisa</h5>
+                      <h5 style="text-align: center;">Nome concurso</h5>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="tab-content">
                     <div class="tab-pane active" id="profile">
-                      <p>Escreve Aqui</p>
+                      <h5 style="text-align: center; ">
+                      <i class="material-icons" style="color: #c2351f;" title="Excluir">delete</i>
+                      &nbsp;&nbsp;&nbsp;
+                      <i class="material-icons" style="color: #c2351f;" title="Editar">edit</i>
+                      &nbsp;&nbsp;&nbsp;
+                      <i class="material-icons" style="color: #c2351f;" title="Informações">info</i>
+                      </h5>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>  
