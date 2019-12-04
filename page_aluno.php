@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="img/pena.png" sizes="300px">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -19,14 +20,16 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="img/sidebar-1.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
+
         <a href="#" class="simple-text logo-normal">LITTERAE</a>
+
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -38,14 +41,20 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">
-              <i class="material-icons">person</i>
-              <p>Meu Perfil</p>
+              <i class="material-icons">post_add</i>
+              <p>Inscrever texto</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">library_books</i>
               <p>Minhas Obras</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="perfilA.php">
+              <i class="material-icons">person</i>
+              <p>Meu Perfil</p>
             </a>
           </li>
         </ul>
@@ -112,7 +121,7 @@
       <!-- End Navbar -->
       <div class="content">
           <div class="row">
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-4 col-md-12">
               <div class="card">
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
