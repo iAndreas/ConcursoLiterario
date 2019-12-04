@@ -5,7 +5,7 @@
   <title>Litterae | Acesso</title>
   <link rel="icon" href="img/pena.png" sizes="300px">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="css/styleLogin.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="css/styleLogin.css">
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 

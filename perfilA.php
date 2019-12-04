@@ -95,42 +95,48 @@
                               
                               <div class="col-md-6">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Matrícula">
+                                    <label for="matricula">Matrícula</label>
+                                    <input matInput>
                                   </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Nome">
+                                    <label for="nome">Nome</label>
+                                    <input matInput>
                                   </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Cidade">
+                                  <label for="cidade">Cidade</label>
+                                  <input matInput>
                                 </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Telefone" type="text">
+                                  <label for="telefone">Telefone</label>
+                                  <input matInput type="text">
                                 </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Usuário" type="text">
+                                  <label for="usuario">Usuário</label>
+                                  <input matInput type="text">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Senha" type="text">
+                                  <label for="Senha">Nova Senha</label>   
+                                  <input matInput type="text">
                                 </mat-form-field>
                               </div>
                           </div>
                          
                          
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Atualizar Perfil</button>
                           <div class="clearfix"></div>
                       </form>
                   </div>
