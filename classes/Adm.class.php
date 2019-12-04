@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "autoload.php";
 
  class Adm extends AbsClassCodigoNome{
@@ -23,6 +24,7 @@ require_once "autoload.php";
     }
 
   public function Logar(){
+      session_start();
       try {
         $banco= Conexao::getInstance();
         $pdo= $banco->getConexao();
@@ -38,7 +40,7 @@ require_once "autoload.php";
               $_SESSION["nome"] = $d_usuario[0]["nome"];
               $_SESSION["usuario"] = $d_usuario[0]["usuario"];
               $_SESSION["senha"] = $d_usuario[0]["senha"];
-              $_SESSION["logado"] = true;
+              $_SESSION["logadoAdm"] = true;
               return "foi";
            }else{
               $Erro = "erro1";

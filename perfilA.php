@@ -1,6 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<?php
+  require_once "autoload.php";
+  $adm= new Adm;
+  $aluno= new Aluno;
+  $jurado= new Jurado;
 
+  if (!isset($_SESSION['logadoA'])){
+    header('Location: indexLogin.php');
+  }else if (isset($_SESSION['logadoAdm'])){
+    header('Location: page_adm.php?erro=erroA');
+  }else if (isset($_SESSION['logadoJ'])){
+    header('Location: page_jurado.php?erro=erroA');
+  }
+?>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="img/pena.png" sizes="300px">

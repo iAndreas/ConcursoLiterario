@@ -119,6 +119,7 @@ require_once "autoload.php";
     }
 
     public function Logar(){
+      session_start();
       try {
         $banco= Conexao::getInstance();
         $pdo= $banco->getConexao();
@@ -137,7 +138,7 @@ require_once "autoload.php";
               $_SESSION["cidade"] = $d_usuario[0]["cidade"];
               $_SESSION["telefone"] = $d_usuario[0]["telefone"];
               $_SESSION["unidadeInstituicao"] = $d_usuario[0]["unidadeInstituicao"];
-              $_SESSION["logado"] = true;
+              $_SESSION["logadoA"] = true;
               return "foi";
            }else{
               $Erro = "erro1";
