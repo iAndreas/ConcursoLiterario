@@ -27,10 +27,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.min.css?v=2.1.1" rel="stylesheet" />
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="assets/demo/demo.css" rel="stylesheet" />
-    <link href="assets/css/material-dashboard.min.css?v=2.1.1" rel="stylesheet" />
+
+ 
 </head>
 
 <body class="">
@@ -88,7 +86,33 @@
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
-          
+          <div class="collapse navbar-collapse justify-content-end">
+            <form class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Pesquisar...">
+                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Perfil</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="logout.php">Sair</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <!-- End Navbar -->
@@ -100,58 +124,56 @@
               <div class="card">
                   <div class="card-header card-header-danger">
                       <h4 class="card-title">Editar Informações</h4>
-                      <p class="card-category">Complete seu perfil</p>
+                      <p class="card-category">Edite seu perfil</p>
                   </div>
                   <div class="card-body">
-                      <form>
-                          <div class="row">
-                              
-                              <div class="col-md-6">
-                                  <mat-form-field class="example-full-width">
-                                    <label for="matricula">Matrícula</label>
-                                    <input matInput>
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                  <mat-form-field class="example-full-width">
-                                    <label for="nome">Nome</label>
-                                    <input matInput>
-                                  </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <label for="cidade">Cidade</label>
-                                  <input matInput>
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <label for="telefone">Telefone</label>
-                                  <input matInput type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <label for="usuario">Usuário</label>
-                                  <input matInput type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <label for="Senha">Nova Senha</label>   
-                                  <input matInput type="text">
-                                </mat-form-field>
-                              </div>
-                          </div>
-                         
-                         
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Atualizar Perfil</button>
-                          <div class="clearfix"></div>
-                      </form>
+                      <!-- FORM AQUI -->
+                    <form>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6" >
+                          <label for="nome" class="bmd-label-floating">Nome</label>
+                          <input type="text" value="" class="form-control" name="nome">
+                        </div>
+                        
+                        <div class="col-md-6">
+                          <label for="usuario" class="bmd-label-floating">Usuário</label>
+                          <input type="text" value="" class="form-control" name="usuario">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="cidade" class="bmd-label-floating">Cidade</label>
+                          <input type="text" value="" class="form-control" name="cidade">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="telefone" class="bmd-label-floating">Telefone</label>
+                          <input type="text" value="" class="form-control" name="telefone">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="unidade" class="bmd-label-floating">Unidade Instituição</label>
+                          <select name="unidade" class="form-control">
+                            <option value="US">Instituto Federal Catarinense - Campus Rio do Sul - Unidade Sede</option>
+                            <option value="UU">Instituto Federal Catarinense - Campus Rio do Sul - Unidade Urbana</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="senha" class="bmd-label-floating">Nova senha</label>
+                          <input type="text" value="" class="form-control" name="senha">
+                        </div>
+                      </div>
+
+                      <br>
+                      <div class="row">
+                        <button type="submit" class="btn btn-danger pull-right">Atualizar informações</button>
+                      </div>
+                    </form>
                   </div>
               </div>
           </div>
