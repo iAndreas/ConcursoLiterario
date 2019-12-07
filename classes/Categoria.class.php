@@ -21,6 +21,22 @@ class Categoria{
     $this->tipo = $tipo;
   }
 
+  public function insertCategoria(){
+    try {
+      $banco= Conexao::getInstance();
+      $pdo= $banco->getConexao();
+      $stmt = $pdo->prepare('INSERT INTO categoria (tipo) VALUES(:tipo)');
+      $stmt->bindParam(':tipo', $this->tipo);
+      $stmt->execute();
+      if ($stmt->rowCount() == 0) {
+        var_dump($stmt->errorInfo());
+      }else{
+        return true;
+      }
+      } catch(PDOException $e) {
+        return 'Error: ' . $e->getMessage();
+    }
+  }
 }
 
 ?>
