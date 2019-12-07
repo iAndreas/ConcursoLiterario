@@ -123,14 +123,14 @@
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <h5>Alguma coisa</h5>
+                      <h5>Cadastrar Obras</h5>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="tab-content">
                     <div class="tab-pane active" id="profile">
-                      <p>Escreve Aqui</p>
+                      <p><a href='cadObra.php'>Clique aqui</a> para cadastrar uma nova obra.</p>
                     </div>
                   </div>
                 </div>
