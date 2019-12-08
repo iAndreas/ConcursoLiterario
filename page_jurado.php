@@ -51,9 +51,9 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
-              <i class="material-icons">person</i>
-              <p>Meu Perfil</p>
+            <a class="nav-link" href="cadCategorias.php">
+              <i class="material-icons">bookmarks</i>
+              <p>Categorias</p>
             </a>
           </li>
           <li class="nav-item ">
