@@ -66,10 +66,10 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 // Informamos o assunto para a mensagem;
     $mail->Subject = "Seu cadastro no Litterae está quase completo!";
 // Definimos o conteúdo do e-mail e aplicamos a função nl2br() para que o conteúdo insira as quebras de linhas adicionadas ao texto;
-    $mail->Body = "<h1>Obrigado por se cadastrar no Litterae!</h1><br>Para confirmar seu cadastro, <a href='https://fabricadetecnologias.ifc-riodosul.edu.br/litterae/cadAluno.php?mt=$matricula'>clique aqui</a>, caso você já tenha se cadastrado, apenas ignore esta mensagem.";
+    $mail->Body = "<h1>Obrigado por se cadastrar no Litterae!</h1><br>Para confirmar seu cadastro, <a href='localhost/Litterae/cadAluno.php?mt=$matricula'>clique aqui</a>, caso você já tenha se cadastrado, apenas ignore esta mensagem.";
 
 // Texto opcional para clientes que não suportem HTML ou desativaram o mesmo.
-    $mail->AltBody = nl2br(strip_tags("Obrigado por se cadastrar no Litterae! Para confirmar seu cadastro, clique no link https://fabricadetecnologias.ifc-riodosul.edu.br/litterae/cadAluno.php?matricula=$matricula, caso você já tenha se cadastrado, apenas ignore esta mensagem."));
+    $mail->AltBody = nl2br(strip_tags("Obrigado por se cadastrar no Litterae! Para confirmar seu cadastro, clique no link localhost/Litterae/cadAluno.php?mt=$matricula, caso você já tenha se cadastrado, apenas ignore esta mensagem."));
      
 // Adicionamos uma condição que verifica o retorno da função send, responsável por disparar o e-mail. Informamos o erro que foi retornado pela propriedade $mail->ErrorInfo, se o envio falhar;
     if(!$mail->send()) {

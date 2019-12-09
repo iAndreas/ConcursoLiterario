@@ -17,9 +17,7 @@
 
 <h2 align="center"> 🛠 A fazer 🛠 </h2>
 
-- Efetuar cadastro (N° da inscrição, unidade, nome do aluno, pseudônimo, turma, série, endereço, cidade, e-mail, telefone.);
+- Cadastro da obra para o concurso (N - N);
 - Efetuar cadastro de feedback;
 - Efetuar impressão do termo de cessão de direitos autorais e uso de imagens;
 - Inserir regulamento;
-- Autorização do ADM antes da inscrição do aluno;
-- Enviar e-mail de confirmação de cadastro caso o usuário tenha inserido a matrícula condizente com o SIGAA (OBS: Necessário <a href="https://getcomposer.org/download/">Composer</a>).

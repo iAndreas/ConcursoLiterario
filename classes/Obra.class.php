@@ -3,7 +3,14 @@
 require_once "autoload.php";
 
 class Obra{
- private $pseudonimo, $turma, $idconsurso;
+ private $codigo, $pseudonimo, $turma, $idconsurso;
+
+ public function getCodigo(){
+   return $this->codigo;
+ }
+ public function setCodigo(){
+   $this->codigo = $codigo;
+ }
 
  public function getPseudonimo(){
    return $this->pseudonimo;
