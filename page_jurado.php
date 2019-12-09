@@ -5,12 +5,12 @@
   $aluno= new Aluno;
   $jurado= new Jurado;
 
-  if (!isset($_SESSION['logadoJ'])){
-    header('Location: indexLogin.php');
-  }else if (isset($_SESSION['logadoAdm'])){
+  if (!isset($_SESSION['logadoJ']) and isset($_SESSION['logadoAdm'])){
     header('Location: page_adm.php?erro=erroA');
-  }else if (isset($_SESSION['logadoA'])){
+  }else if (!isset($_SESSION['logadoJ']) and isset($_SESSION['logadoA'])){
     header('Location: page_aluno.php?erro=erroA');
+  }else if (!isset($_SESSION['logadoJ'])){
+    header('Location: indexLogin.php');
   }
 ?>
 <html lang="en">
@@ -29,9 +29,20 @@
   <link href="assets/css/material-dashboard.min.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </head>
 
 <body class="">
+  <?php
+  include "alertas.php";
+  if (isset($_GET["erro"])) {
+      switch ($_GET["erro"]) {
+        case 'erroA':
+          erroAcesso();
+          break;
+      }
+    }
+  ?>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
       <!--
